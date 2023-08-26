@@ -1,5 +1,23 @@
 :root {
     --primary-color: #160F30;
     --secondary-color: #241663;
-    --buttons-color: #177E89;
+    --tertiary-color: #281b56;
+    --auth-btn-color: #177E89;
+    --auth-btn-hover-color: #116D79;
+    --auth-btn-clicked-color: #0B5C69;
+    
+}
+
+.auth-button {
+    background-color: var(--auth-btn-color);
+    border: none;
+    color: white;
+}
+
+.auth-button:hover {
+    background-color: var(--auth-btn-hover-color);
+}
+
+.auth-button:active {
+    background-color: var(--auth-btn-clicked-color) !important;
 }
