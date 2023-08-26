@@ -1,12 +1,15 @@
 <div class="row d-flex flex-column justify-content-center align-items-center">
-    <h1 class="text-center">Enter your details</h1>
+    <div class="auth-form-header">
+        <h1 class="text-center">Enter your details</h1>
+    </div>
+    
 
-    <form [formGroup]="loginForm" (submit)="onLogin()" class="d-flex flex-column justify-content-center align-items-center">
+    <form [formGroup]="loginForm" (submit)="onLogin()" class="auth-form d-flex flex-column justify-content-center align-items-center">
         <input type="email" formControlName="email" name="email-field" placeholder="Email">
         <input type="password" formControlName="password" name="password-field" placeholder="Password">
 
         <button type="submit" class="btn auth-button">Log in</button>
 
-        <button type="button" class="btn btn-link forgot-pass-info">Forgot the password?</button>
+        <button type="button" class="btn btn-link forgot-pass-info" (click)="switchView('password-recovery')">Forgot the password?</button>
     </form>
 </div>

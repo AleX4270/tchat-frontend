@@ -21,3 +21,43 @@
 .auth-button:active {
     background-color: var(--auth-btn-clicked-color) !important;
 }
+
+.auth-form-header {
+    h1 {
+        font-size: 42px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+}
+
+.auth-form {
+    input {
+        margin-top: 20px;
+        margin-bottom: 11px;
+        width: 65%;
+        height: 50px;
+        background-color: var(--tertiary-color);
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        padding-left: 15px;
+
+        border: none;
+        border-radius: 8px;
+    }
+
+    button {
+        margin-top: 30px;
+        width: 50%;
+        height: 55px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .forgot-pass-info {
+        color: white;
+        text-decoration: none;
+        opacity: 0.6;
+        font-size: 18px;
+    }
+}

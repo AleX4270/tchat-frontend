@@ -8,21 +8,25 @@
         </div>
 
         <div class="auth-container w-100 d-flex flex-column justify-content-center align-items-center">
-            <!-- <h1>Get started</h1>
+            <h1 *ngIf="isMainVisible">Get started</h1>
 
-            <div class="col-12 w-100 get-started-buttons d-flex justify-content-center">
-                <button class="col-6 btn btn-primary">
+            <div *ngIf="isMainVisible" class="col-12 w-100 get-started-buttons d-flex justify-content-center">
+                <button class="col-6 btn btn-primary auth-button" (click)="switchMode('login')">
                     Log in
                 </button>
     
-                <button class="col-6 btn btn-primary">
+                <button class="col-6 btn btn-primary auth-button" (click)="switchMode('register')">
                     Sign up
                 </button>
-            </div> -->
+            </div>
 
-            <app-login-component class="col-12"></app-login-component>
-            <!-- <app-register-component></app-register-component> -->
-            <!-- <app-password-recovery-component></app-password-recovery-component> -->
+            <app-login-component *ngIf="isLoginVisible" (switchViewControl)="switchMode($event)" class="col-12"></app-login-component>
+            <app-register-component *ngIf="isRegisterVisible" (switchViewControl)="switchMode($event)" class="col-12"></app-register-component>
+            <app-password-recovery-component *ngIf="isPasswordRecoveryVisible" (switchViewControl)="switchMode($event)" class="col-12"></app-password-recovery-component>
+        
+            <div class="return-btn" *ngIf="isReturnBtnVisible">
+                <img src="../../../assets/icons/returnIcon.png" (click)="switchMode('')">
+            </div>
         </div>
 
         <div class="copyright-info w-100 d-flex justify-content-between">

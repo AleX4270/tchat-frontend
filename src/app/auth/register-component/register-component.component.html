@@ -1,1 +1,15 @@
-<p>register-component works!</p>
+<div class="row d-flex flex-column justify-content-center align-items-center">
+    <div class="auth-form-header">
+        <h1 class="text-center">Enter your details</h1>
+    </div>
+
+    <form [formGroup]="registerForm" (submit)="onRegister()" class="auth-form d-flex flex-column justify-content-center align-items-center">
+        <input type="email" formControlName="email" name="email-field" placeholder="Email">
+        <input type="password" formControlName="password" name="password-field" placeholder="Password">
+        <input type="password" formControlName="confirmPassword" name="confirmPassword-field" placeholder="Repeat password">
+        
+        <button type="submit" class="btn auth-button">Sign up</button>
+
+        <button type="button" class="btn btn-link forgot-pass-info" (click)="switchView('login')">Already have an account? Log in</button>
+    </form>
+</div>

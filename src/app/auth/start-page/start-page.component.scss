@@ -17,6 +17,24 @@
         }
     }
 
+    .return-btn {
+        img {
+            width: 70px;
+            height: 70px;
+
+            margin-top: 20px;
+            opacity: 0.65;
+        }
+
+        img:hover {
+            opacity: 1;
+        }
+
+        img:active {
+            transform: scale(0.95);
+        }
+    }
+
     .auth-container {
         height: 100%;
 
@@ -28,8 +46,6 @@
         .get-started-buttons {
             button {
                 margin: 15px;
-                background-color: var(--buttons-color);
-                border: none;
 
                 font-size: 20px;
                 font-weight: 500;
