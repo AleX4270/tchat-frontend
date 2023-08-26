@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PanelComponent } from './panel/panel.component';
-
+import { DashboardRoutingModule } from './dashboard-routing.module';
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { PanelComponent } from './panel/panel.component';
     PanelComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    DashboardRoutingModule
   ]
 })
 export class DashboardModule { }

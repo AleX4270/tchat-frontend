@@ -5,7 +5,6 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuthModule } from './auth/auth.module';
 import { AuthInterceptor } from './shared/auth.interceptor';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -19,8 +18,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    AuthModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     {

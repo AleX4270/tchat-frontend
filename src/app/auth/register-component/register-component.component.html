@@ -6,7 +6,7 @@
     <form [formGroup]="registerForm" (submit)="onRegister()" class="auth-form d-flex flex-column justify-content-center align-items-center">
         <input type="email" formControlName="email" name="email-field" placeholder="Email">
         <input type="password" formControlName="password" name="password-field" placeholder="Password">
-        <input type="password" formControlName="confirmPassword" name="confirmPassword-field" placeholder="Repeat password">
+        <input type="password" formControlName="password_confirmation" name="password_confirmation" placeholder="Repeat password">
         
         <button type="submit" class="btn auth-button">Sign up</button>
 

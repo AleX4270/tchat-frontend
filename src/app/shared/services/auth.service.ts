@@ -10,14 +10,7 @@ export class AuthService {
 
     constructor(
         private readonly http: HttpClient
-    ) 
-    {
-
-    }
-
-    public test(): Observable<any> {
-        return this.http.get(`${environment.backendUrl}/test`);
-    }
+    ) {}
 
     public register(data: any): Observable<any> {
         return this.http.post(`${environment.backendUrl}/register`, data);
