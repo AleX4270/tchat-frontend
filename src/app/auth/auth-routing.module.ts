@@ -5,11 +5,16 @@ import { GuestGuard } from '../shared/guards/guest.guard';
 import { StartPageComponent } from './start-page/start-page.component';
 
 const routes: Routes = [
-  { 
-    path: '', 
-    component: StartPageComponent,
-    canActivate: [GuestGuard]
-  }
+    { 
+        path: '', 
+        component: StartPageComponent,
+        canActivate: [GuestGuard]
+    },
+    { 
+        path: 'create-password/:token', 
+        component: StartPageComponent,
+        canActivate: [GuestGuard]
+    }
 ];
 
 @NgModule({

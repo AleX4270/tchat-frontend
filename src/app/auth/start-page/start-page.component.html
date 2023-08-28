@@ -1,8 +1,7 @@
 <div class="row h-100">
-    <div class="col-1 space-filler"></div>
+    <!-- <div class="col-1 space-filler"></div> -->
 
-    
-    <div class="col-4 auth-area d-flex flex-column justify-content-center align-items-center">
+    <div class="col-5 text-dark auth-area d-flex flex-column justify-content-center align-items-center">
         <div class="beta-info align-self-start">
             <p>Beta</p>
         </div>
@@ -20,12 +19,14 @@
                 </button>
             </div>
 
-            <app-login-component *ngIf="isLoginVisible" (switchViewControl)="switchMode($event)" class="col-12"></app-login-component>
-            <app-register-component *ngIf="isRegisterVisible" (switchViewControl)="switchMode($event)" class="col-12"></app-register-component>
-            <app-password-recovery-component *ngIf="isPasswordRecoveryVisible" (switchViewControl)="switchMode($event)" class="col-12"></app-password-recovery-component>
-        
+            <app-login *ngIf="isLoginVisible" (switchViewControl)="switchMode($event)" class="col-12"></app-login>
+            <app-register *ngIf="isRegisterVisible" (switchViewControl)="switchMode($event)" class="col-12"></app-register>
+            <app-password-recovery *ngIf="isPasswordRecoveryVisible" (switchViewControl)="switchMode($event)" class="col-12"></app-password-recovery>
+            <app-password-create *ngIf="isPasswordCreateVisible" [passwordToken]="passwordToken" (switchViewControl)="switchMode($event)" class="col-12"></app-password-create>
+            
+
             <div class="return-btn" *ngIf="isReturnBtnVisible">
-                <img src="../../../assets/icons/returnIcon.png" (click)="switchMode('')">
+                <img src="../../../assets/icons/returnIconBlack.png" (click)="switchMode('')">
             </div>
         </div>
 
@@ -39,7 +40,7 @@
         </div>
     </div>
 
-    <div class="col-7 description-area d-flex flex-column justify-content-center">
+    <div class="col-7 text-white description-area d-flex flex-column justify-content-center">
         <div class="app-name align-self-end">
             <p>tChat</p>
         </div>

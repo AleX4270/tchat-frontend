@@ -1,48 +1,51 @@
 :root {
-    --primary-color: #160F30;
-    --secondary-color: #241663;
-    --tertiary-color: #281b56;
-    --auth-btn-color: #177E89;
-    --auth-btn-hover-color: #116D79;
-    --auth-btn-clicked-color: #0B5C69;
-    
+    --primary-color: #fff;
+    --secondary-color: #065AD8;
+    --tertiary-color: #f6f7f9;
+    --auth-btn-color: #065AD8;
+    --auth-btn-hover-color: #0549D2;
+    --auth-btn-clicked-color: #0439C6;
+    --snackbar-color: #177E89;
 }
 
 .auth-button {
     background-color: var(--auth-btn-color);
     border: none;
-    color: white;
+    color: var(--primary-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .auth-button:hover {
     background-color: var(--auth-btn-hover-color);
+    color: var(--primary-color);
 }
 
 .auth-button:active {
     background-color: var(--auth-btn-clicked-color) !important;
+    color: var(--primary-color) !important;
 }
 
 .auth-form-header {
     h1 {
         font-size: 42px;
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 30px;
     }
 }
 
 .auth-form {
+
     input {
         margin-top: 20px;
         margin-bottom: 11px;
         width: 65%;
         height: 50px;
-        background-color: var(--tertiary-color);
-        color: white;
+        background-color: var(--primary-color);
+        border: #c7c6c6 solid 1px;
         font-size: 20px;
         font-weight: 500;
         padding-left: 15px;
 
-        border: none;
         border-radius: 8px;
     }
 
@@ -51,13 +54,32 @@
         width: 50%;
         height: 55px;
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     .forgot-pass-info {
-        color: white;
+        // color: var(--secondary-color);
+        color: #3a72ec;
         text-decoration: none;
-        opacity: 0.6;
+        // opacity: 0.6;
         font-size: 18px;
     }
+}
+
+.success-snackbar, .mdc-snackbar__surface, .mat-mdc-snack-bar-label {
+    background-color: var(--snackbar-color) !important;
+    // font-family: 'mainFont' !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    color: white !important;
+
+    border-radius: 10px !important;
+}
+
+.mdc-button__label {
+    color: white !important;
+    // font-family: 'mainFont' !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    // text-decoration: underline !important;
 }

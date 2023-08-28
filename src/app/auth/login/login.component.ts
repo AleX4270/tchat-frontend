@@ -6,11 +6,11 @@ import { UserStoreService } from 'src/app/shared/services/user-store.service';
 import { NotificationService } from 'src/app/shared/services/notification.service';
 
 @Component({
-  selector: 'app-login-component',
-  templateUrl: './login-component.component.html',
-  styleUrls: ['./login-component.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class LoginComponentComponent {
+export class LoginComponent {
     @Output() switchViewControl: EventEmitter<string> = new EventEmitter<string>();
 
     public loginForm: FormGroup = new FormGroup({

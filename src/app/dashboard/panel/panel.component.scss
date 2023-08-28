@@ -1,0 +1,21 @@
+:host {
+    background-color: var(--primary-color);
+    color: white;
+    height: 92vh;
+    // border-radius: 15px;
+}
+
+.mode-container {
+    ul {
+        list-style-type: none;
+        font-size: 25px;
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li:hover {
+            cursor: pointer;
+        }
+    }
+}

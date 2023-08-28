@@ -15,7 +15,8 @@ export class NotificationService {
     public showNotification(message: string, action: string, duration: number) {
         this.snackBar.open(message, action, {
             duration: duration,
-            verticalPosition: 'top',
+            verticalPosition: 'bottom',
+            horizontalPosition: 'right',
             panelClass: 'success-snackbar'
         });
     }

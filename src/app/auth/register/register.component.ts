@@ -5,11 +5,11 @@ import { Router } from '@angular/router';
 import { NotificationService } from 'src/app/shared/services/notification.service';
 
 @Component({
-  selector: 'app-register-component',
-  templateUrl: './register-component.component.html',
-  styleUrls: ['./register-component.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class RegisterComponentComponent {
+export class RegisterComponent {
     @Output() switchViewControl: EventEmitter<string> = new EventEmitter<string>();
 
     public registerForm: FormGroup = new FormGroup({
@@ -35,6 +35,11 @@ export class RegisterComponentComponent {
         if(this.registerForm.invalid) {
             this.notificationService.showNotification('Dane zostały uzupełnione w nieprawidłowy sposób', 'OK', 3000);
             this.registerForm.markAsDirty();
+            return;
+        }
+
+        if(this.registerForm.value.password !== this.registerForm.value.password_confirmation) {
+            this.notificationService.showNotification('Hasła nie są takie same.', 'OK', 3000);
             return;
         }
 
