@@ -1,0 +1,40 @@
+:host {
+    background-color: var(--primary-color);
+    color: white;
+    height: 100vh;
+}
+
+.action-bar {
+    border-bottom: 2px solid var(--dashboard-border-color);
+    height: 13vh;
+
+    .friend-picture {
+        margin-left: 10px;
+        img {
+            width: 65px;
+            height: 65px;
+        }
+    }
+
+    .friend-info {
+        margin-left: 20px;
+        font-size: 21.5px;
+        font-weight: 500;
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .actions {
+        padding-right: 10px;
+    }
+}
+
+.chat-box {
+    height: 77vh;
+}
+
+.message-box {
+    height: 10vh;
+}

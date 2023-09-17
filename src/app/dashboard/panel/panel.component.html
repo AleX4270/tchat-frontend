@@ -1,12 +1,9 @@
 <div class="row h-100">
-    <div class="mode-container">
-        <ul>
-            <li>Friends</li>
-            <li (click)="onLogout()">Logout</li>
-        </ul>
+    <div class="search-friends mt-4">
+        <app-input-bar [iconSrc]="'../../../assets/icons/searchIcon.png'" [placeholder]="'Search...'"></app-input-bar>
+    </div>
+
+    <div class="friends-list">
+
     </div>
 </div>
-
-<!-- <button class="btn btn-danger" (click)="onLogout()">
-    Logout
-</button> -->

@@ -34,7 +34,7 @@ export class LoginComponent {
         }
 
         if(this.loginForm.invalid) {
-            this.notificationService.showNotification('Dane zostały uzupełnione w nieprawidłowy sposób', 'OK', 3000);
+            this.notificationService.showNotification('Incorrect data format', 'OK', 3000);
             this.loginForm.markAsDirty();
             return;
         }
@@ -57,7 +57,7 @@ export class LoginComponent {
                 this.isFormSubmitted = false;
             },
             error: () => {
-                this.notificationService.showNotification('Podano błędne dane użytkownika', 'OK', 3000);
+                this.notificationService.showNotification('Incorrect email or password', 'OK', 3000);
                 this.isFormSubmitted = false;
             },
             complete: () => {

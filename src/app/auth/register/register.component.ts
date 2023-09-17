@@ -33,13 +33,13 @@ export class RegisterComponent {
         }
 
         if(this.registerForm.invalid) {
-            this.notificationService.showNotification('Dane zostały uzupełnione w nieprawidłowy sposób', 'OK', 3000);
+            this.notificationService.showNotification('Incorrect data format', 'OK', 3000);
             this.registerForm.markAsDirty();
             return;
         }
 
         if(this.registerForm.value.password !== this.registerForm.value.password_confirmation) {
-            this.notificationService.showNotification('Hasła nie są takie same.', 'OK', 3000);
+            this.notificationService.showNotification('Passwords are not the same', 'OK', 3000);
             return;
         }
 
@@ -47,12 +47,12 @@ export class RegisterComponent {
         const {email, password, password_confirmation} = this.registerForm.value;
         this.authService.register({email, password, password_confirmation}).subscribe({
             next: (res) => {
-                this.notificationService.showNotification('Pomyślnie zarejestrowano', 'OK', 3000);
+                this.notificationService.showNotification('Registered successfully', 'OK', 3000);
                 this.router.navigate(['/']);
                 this.isFormSubmitted = false;
             },
             error: () => {
-                this.notificationService.showNotification('Nie udało się zarejestrować.', 'OK', 3000);
+                this.notificationService.showNotification('An error occured while trying to register a new user', 'OK', 3000);
                 this.isFormSubmitted = false;
             },
             complete: () => {

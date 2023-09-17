@@ -29,7 +29,7 @@ export class PasswordRecoveryComponent {
         }
 
         if(this.passwordRecoveryForm.invalid) {
-            this.notificationService.showNotification('Podano dane w nieprawidłowym formacie.', 'OK', 3000);
+            this.notificationService.showNotification('Incorrect data format', 'OK', 3000);
             this.passwordRecoveryForm.markAsDirty();
             return;
         }
@@ -39,7 +39,7 @@ export class PasswordRecoveryComponent {
 
         this.authService.recoverPassword({email}).subscribe({
             next: () => {
-                this.notificationService.showNotification('Jeśli podany adres znajduje się w naszej bazie to wysłaliśmy na niego link resetujący hasło.', 'OK', 3000);
+                this.notificationService.showNotification('If this email is correct, you will receive a password recovery link', 'OK', 3000);
             },
             error: () => {
                 this.isFormSubmitted = false;

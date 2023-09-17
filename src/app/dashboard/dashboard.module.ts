@@ -3,21 +3,19 @@ import { CommonModule } from '@angular/common';
 import { PanelComponent } from './panel/panel.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ActionBarComponent } from './action-bar/action-bar.component';
-import { ChatViewComponent } from './chat-view/chat-view.component';
-import { ListViewComponent } from './list-view/list-view.component';
+import { ChatWindowComponent } from './chat-window/chat-window.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     PanelComponent,
     DashboardComponent,
-    ActionBarComponent,
-    ChatViewComponent,
-    ListViewComponent,
+    ChatWindowComponent
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    SharedModule
   ]
 })
 export class DashboardModule { }

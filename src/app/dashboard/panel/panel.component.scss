@@ -1,14 +1,15 @@
 :host {
     background-color: var(--primary-color);
     color: white;
-    height: 92vh;
-    // border-radius: 15px;
+    height: 100vh;
+    border-right: 2px solid var(--dashboard-border-color);
 }
 
 .mode-container {
     ul {
         list-style-type: none;
         font-size: 25px;
+        color: red;
 
         li {
             margin-bottom: 10px;

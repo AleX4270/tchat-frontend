@@ -10,25 +10,5 @@ import { NotificationService } from 'src/app/shared/services/notification.servic
   styleUrls: ['./panel.component.scss']
 })
 export class PanelComponent {
-    constructor(
-        private authService: AuthService,
-        private userStoreService: UserStoreService,
-        private router: Router,
-        private notificationService: NotificationService,
-    ) {
-
-    }
-
-    public onLogout(): void {
-        this.authService.logout().subscribe({
-            next: (response) => {
-                this.userStoreService.clearUser();
-            },
-            error: (error) => {},
-            complete: () => {
-                this.router.navigate(['/']);
-                this.notificationService.showNotification('Pomyślnie wylogowano', 'OK', 3000);
-            }
-        });
-    }
+    
 }

@@ -5,14 +5,16 @@
     --auth-btn-color: #065AD8;
     --auth-btn-hover-color: #0549D2;
     --auth-btn-clicked-color: #0439C6;
-    --snackbar-color: #177E89;
+    --snackbar-color: #D33F49;
+    --dashboard-border-color: #efefef;
+    --input-border-color: #e6e9ec;
+    --icon-gray-color: #5e5e5e;
 }
 
 .auth-button {
     background-color: var(--auth-btn-color);
     border: none;
     color: var(--primary-color);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .auth-button:hover {

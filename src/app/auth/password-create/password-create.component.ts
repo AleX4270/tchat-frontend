@@ -35,13 +35,13 @@ export class PasswordCreateComponent {
         }
 
         if(this.passwordCreateForm.invalid) {
-            this.notificationService.showNotification('Podano dane w nieprawidłowym formacie.', 'OK', 3000);
+            this.notificationService.showNotification('Incorrect data format', 'OK', 3000);
             this.passwordCreateForm.markAsDirty();
             return;
         }
 
         if(this.passwordCreateForm.value.password !== this.passwordCreateForm.value.password_confirmation) {
-            this.notificationService.showNotification('Hasła nie są takie same.', 'OK', 3000);
+            this.notificationService.showNotification('Passwords are not the same', 'OK', 3000);
             return;
         }
 
@@ -53,8 +53,14 @@ export class PasswordCreateComponent {
         }
 
         this.authService.resetPassword(data).subscribe({
-            next: () => {
-                
+            next: (res) => {
+                if(res.status === 'success') {
+                    this.notificationService.showNotification('Password has been changed', 'OK', 3000);
+                    this.switchView('login');
+                }
+                else {
+                    this.notificationService.showNotification('Incorrect token', 'OK', 3000);
+                }
             },
             error: () => {
                 this.isFormSubmitted = false;

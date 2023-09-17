@@ -1,0 +1,48 @@
+button {
+    position: relative;
+    // border: 2px solid var(--snackbar-color);
+    border: 2px solid grey;
+    border-radius: 10px;
+    background: none;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+    margin: 0;
+
+    img {
+        width: 36px;
+        height: 36px;
+        color: var(--icon-background-color);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: #f0f0f0;
+    }
+
+    &:active {
+        background-color: #dcdcdc;
+    }
+
+    &::after {
+        content: attr(title);
+        position: absolute;
+        background-color: #333;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        top: 115%; 
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s, visibility 0.2s;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+}

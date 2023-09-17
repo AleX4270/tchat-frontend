@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListViewComponent } from './list-view.component';
+import { InputBarComponent } from './input-bar.component';
 
-describe('ListViewComponent', () => {
-  let component: ListViewComponent;
-  let fixture: ComponentFixture<ListViewComponent>;
+describe('InputBarComponent', () => {
+  let component: InputBarComponent;
+  let fixture: ComponentFixture<InputBarComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ListViewComponent]
+      declarations: [InputBarComponent]
     });
-    fixture = TestBed.createComponent(ListViewComponent);
+    fixture = TestBed.createComponent(InputBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
