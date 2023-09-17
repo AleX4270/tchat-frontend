@@ -5,18 +5,11 @@
     border-right: 2px solid var(--dashboard-border-color);
 }
 
-.mode-container {
-    ul {
-        list-style-type: none;
-        font-size: 25px;
-        color: red;
+.search-friends {
+    height: 10vh;
+}
 
-        li {
-            margin-bottom: 10px;
-        }
-
-        li:hover {
-            cursor: pointer;
-        }
-    }
+.friends-list {
+    height: 90vh;
+    overflow-y: auto;
 }

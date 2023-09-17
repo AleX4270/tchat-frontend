@@ -1,0 +1,37 @@
+.friend-box {
+    margin: 5px;
+    padding: 5px 5px 5px 20px;
+    border-radius: 7px;
+
+    .profile-picture {
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .friend-info {
+        .friend-username {
+            font-weight: 500;
+            font-size: 17px;
+        }
+
+        .friend-status {
+            font-size: 15px;
+            opacity: 0.6;
+        }
+
+        p {
+            margin-top: 4px;
+        }
+    }
+}
+
+.friend-box:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.friend-box:active {
+    background-color: #dcdcdc;
+}

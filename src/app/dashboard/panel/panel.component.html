@@ -3,7 +3,7 @@
         <app-input-bar [iconSrc]="'../../../assets/icons/searchIcon.png'" [placeholder]="'Search...'"></app-input-bar>
     </div>
 
-    <div class="friends-list">
-
+    <div class="friends-list d-flex flex-column justify-content-start align-items-center">
+        <app-friend-box class="col-12" *ngFor="let friend of testFriendList" [username]="friend.username" [status]="friend.status"></app-friend-box>
     </div>
 </div>

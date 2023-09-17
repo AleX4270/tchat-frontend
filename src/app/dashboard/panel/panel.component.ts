@@ -10,5 +10,10 @@ import { NotificationService } from 'src/app/shared/services/notification.servic
   styleUrls: ['./panel.component.scss']
 })
 export class PanelComponent {
-    
+    public testFriendList: any[] = [
+        { username: 'John Doe', status: 'online' },
+        { username: 'Jane Doe', status: 'offline' },
+        { username: 'John Smith', status: 'online' },
+        { username: 'Jane Smith', status: 'offline' },
+    ];
 }

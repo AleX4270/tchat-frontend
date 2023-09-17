@@ -6,12 +6,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoaderComponent } from './view/loader/loader.component';
 import { ActionButtonComponent } from './components/action-button/action-button.component';
 import { InputBarComponent } from './components/input-bar/input-bar.component';
+import { FriendBoxComponent } from './components/friend-box/friend-box.component';
 
 @NgModule({
   declarations: [
     LoaderComponent,
     ActionButtonComponent,
-    InputBarComponent
+    InputBarComponent,
+    FriendBoxComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { InputBarComponent } from './components/input-bar/input-bar.component';
     MatSnackBarModule,
     LoaderComponent,
     ActionButtonComponent,
-    InputBarComponent
+    InputBarComponent,
+    FriendBoxComponent
   ]
 })
 export class SharedModule { }
