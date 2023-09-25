@@ -1,9 +1,10 @@
 <div class="row h-100">
     <div class="search-friends mt-4">
-        <app-input-bar [iconSrc]="'../../../assets/icons/searchIcon.png'" [placeholder]="'Search...'"></app-input-bar>
+        <app-input-bar [iconSrc]="'../../../assets/icons/searchIcon.png'" [placeholder]="'Search...'" (onInput)="onUserTermInput($event)"></app-input-bar>
     </div>
 
     <div class="friends-list d-flex flex-column justify-content-start align-items-center">
-        <app-friend-box class="col-12" *ngFor="let friend of testFriendList" [username]="friend.username" [status]="friend.status"></app-friend-box>
+        <app-friend-box class="col-12" *ngFor="let user of userList" [username]="user.name" [status]="user.status"
+        (click)="onFriendSelected(user)"></app-friend-box>
     </div>
 </div>

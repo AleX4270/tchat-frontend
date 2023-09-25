@@ -7,6 +7,7 @@ import { LoaderComponent } from './view/loader/loader.component';
 import { ActionButtonComponent } from './components/action-button/action-button.component';
 import { InputBarComponent } from './components/input-bar/input-bar.component';
 import { FriendBoxComponent } from './components/friend-box/friend-box.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FriendBoxComponent } from './components/friend-box/friend-box.component
     HttpClientModule,
     RouterModule,
     MatSnackBarModule,
+    FormsModule
   ],
   exports: [
     CommonModule,
