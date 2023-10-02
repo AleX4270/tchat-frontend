@@ -1,0 +1,29 @@
+.message-bubble {
+    align-items: flex-end;
+    
+    .message-content {
+        max-width: 45%;
+        width: fit-content;
+        font-weight: 500;
+        padding: 16px;
+        border-radius: 13px;
+        color: white;
+        background-color: #0E79B2;
+    }
+
+    .message-timestamp {
+        padding-left: 5px;
+        color: gray;
+        opacity: 0.7;
+        font-size: 11px;
+    }
+}
+
+.message-bubble-left {
+    align-items: flex-start;
+
+    .message-content {
+        background-color: rgb(143, 143, 143) !important;
+        color: white !important;
+    }
+}

@@ -12,6 +12,63 @@ import { FriendService } from 'src/app/shared/services/friend.service';
 })
 export class ChatWindowComponent implements OnInit {
     public friendData: any;
+    public testMessages: any[] = [
+        {
+            isSender: true,
+            message: 'Hello',
+            timestamp: '12:00'
+        },
+        {
+            isSender: false,
+            message: "I'm fine, thanks. How are you?",
+            timestamp: '12:05'
+        },
+        {
+            isSender: true,
+            message: "I'm good too, thanks for asking.",
+            timestamp: '12:06'
+        },
+        {
+            isSender: true,
+            message: "What are you doing today?",   
+            timestamp: '12:07'
+        },
+        {
+            isSender: false,
+            message: "I'm going to the park with my dog.",   
+            timestamp: '12:08'
+        },
+        {
+            isSender: false,
+            message: "Do you want to come?",   
+            timestamp: '12:08'
+        },
+        {
+            isSender: true,
+            message: "I'd love to, but I'm busy today.", 
+            timestamp: '12:09'
+        },
+        {
+            isSender: true,
+            message: "Maybe some other time.",   
+            timestamp: '12:10'
+        },
+        {
+            isSender: false,
+            message: "Ok, no problem.",   
+            timestamp: '12:10'
+        },
+        {
+            isSender: false,
+            message: "Have a nice day!",   
+            timestamp: '12:10'
+        },
+        {
+            isSender: true,
+            message: "You too!",   
+            timestamp: '12:12'
+        },
+    ];
 
     constructor(
         private authService: AuthService,

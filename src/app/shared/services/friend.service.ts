@@ -31,4 +31,8 @@ export class FriendService {
     public getUsers(term: string): Observable<any> {
         return this.http.get(`${environment.backendUrl}/list?term=${term}`);
     }
+
+    public getFriends(term: string): Observable<any> {
+        return this.http.get(`${environment.backendUrl}/friends?term=${term}`);
+    }
 }

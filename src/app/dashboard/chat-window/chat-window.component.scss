@@ -2,6 +2,7 @@
     background-color: var(--primary-color);
     color: white;
     height: 100vh;
+    overflow-y: scroll;
 }
 
 .action-bar {
@@ -31,8 +32,9 @@
     }
 }
 
-.chat-box {
+.chat-box-wrapper {
     height: 77vh;
+    overflow-y: scroll;  
 }
 
 .message-box {

@@ -15,8 +15,10 @@
             </div>
         </div>
     
-        <div class="chat-box col-12">
-            
+        <div class="chat-box-wrapper">
+            <div class="chat-box col-12 d-flex flex-column justify-content-end">
+                <app-message-bubble *ngFor="let message of testMessages" [message]="message"></app-message-bubble>
+            </div>
         </div>
     
         <div class="message-box col-12">

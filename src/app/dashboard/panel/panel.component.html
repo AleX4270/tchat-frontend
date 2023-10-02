@@ -1,5 +1,11 @@
 <div class="row h-100">
-    <div class="search-friends mt-4">
+    
+    <div class="user-type-switch d-flex justify-content-center align-items-end">
+        <button class="user-type-all-btn" (click)="changeUserListType('all')" [ngClass]="{'selected-option': listAll}">Wszyscy</button>
+        <button class="user-type-friends" (click)="changeUserListType('friends')" [ngClass]="{'selected-option': listFriends}">Znajomi</button>
+    </div>
+
+    <div class="search-friends">
         <app-input-bar [iconSrc]="'../../../assets/icons/searchIcon.png'" [placeholder]="'Search...'" (onInput)="onUserTermInput($event)"></app-input-bar>
     </div>
 

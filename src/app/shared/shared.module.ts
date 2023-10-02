@@ -8,13 +8,15 @@ import { ActionButtonComponent } from './components/action-button/action-button.
 import { InputBarComponent } from './components/input-bar/input-bar.component';
 import { FriendBoxComponent } from './components/friend-box/friend-box.component';
 import { FormsModule } from '@angular/forms';
+import { MessageBubbleComponent } from './components/message-bubble/message-bubble.component';
 
 @NgModule({
   declarations: [
     LoaderComponent,
     ActionButtonComponent,
     InputBarComponent,
-    FriendBoxComponent
+    FriendBoxComponent,
+    MessageBubbleComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     LoaderComponent,
     ActionButtonComponent,
     InputBarComponent,
-    FriendBoxComponent
+    FriendBoxComponent,
+    MessageBubbleComponent,
   ]
 })
 export class SharedModule { }
