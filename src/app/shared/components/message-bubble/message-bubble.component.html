@@ -1,10 +1,10 @@
 <ng-container *ngIf="message !== undefined">
     <div class="message-bubble d-flex flex-column" [ngClass]="{'message-bubble-left': !message.isSender}">
         <div class="message-content d-flex justify-content-start align-items-center">
-            <span>{{message.message}}</span>
+            <span>{{message.content}}</span>
         </div>
         <div class="message-timestamp">
-            <p>{{message.timestamp}}</p>
+            <p>{{message.created_at}}</p>
         </div>
     </div>
 </ng-container>

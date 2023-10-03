@@ -1,5 +1,9 @@
 export interface Message {
+    content: string;
+    created_at: string;
+    id: number;
     isSender: boolean;
-    message: string;
-    timestamp: string;
+    receiver_id: number;
+    sender_id: number;
+    updated_at: string;
 }

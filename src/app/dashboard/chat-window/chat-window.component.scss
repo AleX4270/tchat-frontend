@@ -35,6 +35,10 @@
 .chat-box-wrapper {
     height: 77vh;
     overflow-y: scroll;  
+
+    .chat-box {
+        height: 100%;
+    }
 }
 
 .message-box {

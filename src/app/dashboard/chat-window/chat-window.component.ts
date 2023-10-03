@@ -4,6 +4,7 @@ import { UserStoreService } from 'src/app/shared/services/user-store.service';
 import { Router } from '@angular/router';
 import { NotificationService } from 'src/app/shared/services/notification.service';
 import { FriendService } from 'src/app/shared/services/friend.service';
+import { ChatService } from 'src/app/shared/services/chat.service';
 
 @Component({
   selector: 'app-chat-window',
@@ -12,6 +13,7 @@ import { FriendService } from 'src/app/shared/services/friend.service';
 })
 export class ChatWindowComponent implements OnInit {
     public friendData: any;
+    public messageData: any;
     public testMessages: any[] = [
         {
             isSender: true,
@@ -75,7 +77,8 @@ export class ChatWindowComponent implements OnInit {
         private userStoreService: UserStoreService,
         private router: Router,
         private notificationService: NotificationService,
-        private friendService: FriendService
+        private friendService: FriendService,
+        private chatService: ChatService
     ) {
 
     }
@@ -96,7 +99,19 @@ export class ChatWindowComponent implements OnInit {
     ngOnInit(): void {
         this.friendService.getFriendData().subscribe((friend: any) => {
             this.friendData = friend;
-            //TODO: get messages from backend
+            console.log(this.friendData.id);
+            this.chatService.history(this.friendData.id, 30).subscribe({
+                next: (response) => {
+                    console.log(response);
+                    this.messageData = response['messages'];
+                },
+                error: (error) => {
+                    console.log(error);
+                },
+                complete: () => {
+                    
+                }
+            });
         });
     }    
 }
